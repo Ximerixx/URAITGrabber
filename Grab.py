@@ -3,7 +3,7 @@ import sys
 import fileinput
 import time
 from pprint import pprint 
-
+import webbrowser
 import json 
 
 
@@ -34,35 +34,81 @@ print("Done writing GibeIriesh")
 #"In the hellfire of twisted metal was one guy..."
         #глобаль щит равен нулю сука
         #НУЛЮ Я СКАЗАЛ
-SHIT = 0
-def SDBrowser(link):
-    for EveryShitPassingBy in range (10):
-        #take the shit
-        global SHIT 
-        #count the shit
-        SHIT += 1
-        #if there's a puddle of shit, wait before it dissolve in air
-        if SHIT >= 10:
-            time.sleep(5) #let's take a nap, waiting before it vanishes
-            #it vanished? NO? GOTTA WASH THAT PUDDLE!
-            SHIT = 0
-        #Poo
-        #pooowith browser
+#SHIT = 0
+#def SDBrowser(dodolink):
+#    print("sdb")
+#    for EveryShitPassingBy in range (10):
+#        #take the shit
+#        global SHIT 
+#        #count the shit
+#        SHIT += 1
+#        print("sdb2")
+#        #if there's a puddle of shit, wait before it dissolve in air
+#        if SHIT >= 10:
+#            time.sleep(5) #let's take a nap, waiting before it vanishes
+#            #it vanished? NO? GOTTA WASH THAT PUDDLE!
+#            SHIT = 0
+#            print("sdb3")
+#        
+#        #Poo
+#        #pooowith browser
+#        print(dodolink)
 
-def dBrowser(**DLink):
-    #
-    pass
+SHIT=0
+count = 0
+def dBrowser(self):
+    #fro every list entry call tre download er
+    for everyshit in GeneralisimuxLinks:
+        for EveryShitPassingBy in range (10):
+            #take the shit
+            global SHIT 
+            #count the shit
+            global count
+            
+            SHIT += 1
+            #if there's a puddle of shit, wait before it dissolve in air
+            if SHIT >= 10:
+                time.sleep(5) #let's take a nap, waiting before it vanishes
+                #it vanished? NO? GOTTA WASH THAT PUDDLE!
+                SHIT = 0
+            #Poo
+            #pooowith browser
+            print(GeneralisimuxLinks[count])
+            webbrowser.open(GeneralisimuxLinks[count])
+            count += 1
+    
 
 
+import requests
 #and there was a normal guy, trying new, fancy things
-def Direct(a1Link, a1cookie):
-    pass
+def Direct():
+    
+    #setting things up
+    for everyelement in GeneralisimuxLinks:
+        global count
+        count = 0
+        #payload to get request
+        #taking it from payload.json
+        for element in range(config['LastPage']):
+            payload = []
+            with open('payload.json') as dict:
+                payload = json.load(dict)
+            url = GeneralisimuxLinks[count]
+            count += 1
+            request = requests.get(url, params=payload)
+            with open("page_000"+str(count)+".svg.gz", "wb") as f:
+                f.write(request.content)
+        
 
 
 
 
 if config['DownalodFromBrowser?'] == False : #then      ///yeah, i'm that bad///
-    print("something")
+    Direct()
+elif config['DownalodFromBrowser?'] == True: #go fuck
+    dBrowser(GeneralisimuxLinks)
+else:
+    Exception("Mode wasn't specified") 
 
 
 
