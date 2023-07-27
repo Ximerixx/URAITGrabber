@@ -96,8 +96,17 @@ def Direct():
             url = GeneralisimuxLinks[count]
             count += 1
             request = requests.get(url, params=payload)
-            with open("page_000"+str(count)+".svg.gz", "wb") as f:
+            CurrMane = "page_000"+str(count)+".svg"
+            with open(CurrMane, "wb") as f:
                 f.write(request.content)
+            if config['DeMark'] == True:
+                DeMark(CurrMane)
+        
+
+
+def DeMark(filename):
+    pass
+
         
 
 
