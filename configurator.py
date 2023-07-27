@@ -9,6 +9,7 @@ config = {
             "GeneralURL": "https://urait.ru/viewer/page/",
             "DownalodFromBrowser?": False,
             "LastPage": 336,
+            "DeMark": True,
           } #""" In LastPage you must put a number last page of the book"""
             #and remember you should have a cookie for user that have access for book you want to download
 print('this is the config rn')
