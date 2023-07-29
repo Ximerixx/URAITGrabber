@@ -100,14 +100,33 @@ def Direct():
             with open(CurrMane, "wb") as f:
                 f.write(request.content)
             if config['DeMark'] == True:
-                DeMark(CurrMane)
+                pass
+                #DeMark(CurrMane)
         
 
 
-def DeMark(filename):
-    pass
+#needed to fix_LOL
 
-        
+#def DeMark(filename):
+#    with open(filename, 'r') as f:
+#        lines = f.readlines()
+#        #find index of line to remove
+#        for index, line in enumerate(lines):
+#            template = config['TemplateToRemove']
+#            #'''<text x="10" y="666" font-size="13" font-family="Arial" fill="#cccccc">https://urait.ru</text>'''
+#            if template in line:
+#                #remove line
+#                print("Found one!")
+#                #lines=[line.replace( '''font-size="13" font-family="Arial" fill="#cccccc">https://urait.ru</text></svg>''', "</svg>" ) for line in lines]
+#                lines=line.replace( template, '''</svg>''')
+#                #lines.pop(index)
+#            #lines.append(index, "</svg>")   g>''', "</svg>" )
+#            break
+#    #writeew file   
+#    with open(filename, 'w') as f:
+#        f.write(''.join(lines))
+
+
 
 
 
@@ -126,4 +145,4 @@ else:
 
 
 
-print("Dowloading my ass piece by piece")
+print("Dowloading my ass piece by piece finished")
